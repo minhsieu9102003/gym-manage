@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %>
+        <form action="/members" method="POST">
+            <input type="text" placeholder="First Name" name="member[firstname]" required>
+            <input type="text" placeholder="Last Name" name="member[lastname]" required>
+            <input type="date" placeholder="Join Date" name="member[join_date]" required>
+            <input type="text" placeholder="Address 1" name="member[address1]" required>
+            <input type="text" placeholder="Address 2" name="member[address2]" required>
+
+            <select name="member[room]" required>
+                <% for (let room of rooms) { %>
+                    <option value="<%= room._id %>">
+                        <%= room.name %>
+                    </option>
+                    <% } %>
+            </select>
+            <button>Add Member</button>
+        </form>
+        <table class="member-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Join Date</th>
+                    <th>Address</th>
+                    <th>Membership</th>
+                    <th>Room</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let member of members) { %>
+                    <tr>
+                        <td><span>
+                                <%= member._id %>
+                            </span></td>
+                        <td><span>
+                                <%= member.firstname %>
+                            </span></td>
+                        <td><span>
+                                <%= member.lastname %>
+                            </span></td>
+                        <td><span>
+                                <%= member.join_date %>
+                            </span></td>
+                        <td>
+                            <span>
+                                <%= member.address1 %>
+                            </span><br>
+                            <span>
+                                <%= member.address2 %>
+                            </span>
+                        </td>
+                        <td>
+                            <% if (member.membership) { %>
+                                <span>
+                                    <%= member.membership.tier %>
+                                </span>
+                                <% } else { %>
+                                    <span>No Membership</span>
+                                    <% } %>
+                        </td>
+                        <td>
+                            <% if (member.room) { %>
+                                <span>
+                                    <%= member.room.name %>
+                                </span>
+                                <% } else { %>
+                                    <span>No Room Assigned</span>
+                                    <% } %>
+                        </td>
+                        <td>
+                            <a href="/members/<%= member._id %>">Update</a>
+                        </td>
+                        <td>
+                            <form action="/members/<%= member._id %>?_method=DELETE" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <a href="/admin">Back to admin page</a>
+</body>
+
+</html>

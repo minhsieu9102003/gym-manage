@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="room__show">
+    <%- include('../navigation') %>
+        <div class="room__show-container">
+            <h1>
+                <%= room.name %>
+            </h1>
+            <h3>Capacity: <%= room.capacity %>
+            </h3>
+
+            <h3>Equipment:</h3>
+            <ul>
+                <% for (let equipment of room.equipment) { %>
+                    <li>
+                        <%= equipment.name %> - <%= equipment.quantity %>
+                    </li>
+                    <% } %>
+            </ul>
+            <h3>Members:</h3>
+            <ul>
+                <% for (let member of room.members) { %>
+                    <li>
+                        <%= member.firstname %>
+                            <%= member.lastname %>
+                    </li>
+                    <% } %>
+            </ul>
+            <form class='room__show-add-form' action="/rooms/<%= room._id %>?_method=PUT" method="POST">
+                <input type="text" placeholder="Room Name" name="room[name]" value="<%= room.name %>">
+                <input type="number" placeholder="Room Capacity" name="room[capacity]" value="<%= room.capacity %>">
+                <button class="room__show-add-button">Update Room</button>
+            </form>
+            <a class='room__show-back' href="/rooms">Back to Rooms &#8592;</a>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipments</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %>
+        <form action="/equipments" method="POST">
+            <input type="text" placeholder="Equipment Name" name="equipment[name]" required>
+            <input type="number" placeholder="Quantity" name="equipment[quantity]" required>
+            <input type="text" placeholder="Origin" name="equipment[origin]" required>
+            <input type="date" placeholder="Date of Arrival" name="equipment[date_of_arrival]" required>
+            <input type="number" placeholder="Price" name="equipment[price]" required>
+            <input type="text" placeholder="Image url" name="equipment[image]">
+            <select name="equipment[room]" required>
+                <% for (let room of rooms) { %>
+                    <option value="<%= room._id %>">
+                        <%= room.name %>
+                    </option>
+                    <% } %>
+            </select>
+            <button>Add Equipment</button>
+        </form>
+        <table class="equipment-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Origin</th>
+                    <th>Date of Arrival</th>
+                    <th>Price</th>
+                    <th>Room</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let equipment of equipments) { %>
+                    <tr>
+
+                        <td>
+                            <span>
+                                <%= equipment.name %>
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                <%= equipment.quantity %>
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                <%= equipment.origin %>
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                <%= equipment.date_of_arrival %>
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                <%= equipment.price %>
+                            </span>
+                        </td>
+                        <td>
+                            <% if (equipment.room) { %>
+                                <span>
+                                    <%= equipment.room.name %>
+                                </span>
+                                <% } else { %>
+                                    <span>No Room Assigned</span>
+                                    <% } %>
+                        </td>
+
+                        <td>
+                            <a href="/equipments/<%= equipment._id %>">Update</a>
+                        </td>
+
+                        <td>
+                            <form action="/equipments/<%= equipment._id %>?_method=DELETE" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <a href="/admin">Back to admin page &#8592;</a>
+</body>
+
+</html>

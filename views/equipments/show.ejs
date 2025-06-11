@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %>
+        <h1>
+            <%= equipment.name %>
+        </h1>
+        <h2>Quantity: <%= equipment.quantity %>
+        </h2>
+        <h3>Origin: <%= equipment.origin %>
+        </h3>
+        <h3>Date of Arrival: <%= equipment.date_of_arrival %>
+        </h3>
+        <h3>Price: <%= equipment.price %>
+        </h3>
+
+        <form action="/equipments/<%= equipment._id %>?_method=PUT" method="POST">
+            <input type="text" placeholder="Equipment Name" name="equipment[name]" value="<%= equipment.name %>">
+            <input type="number" placeholder="Quantity" name="equipment[quantity]" value="<%= equipment.quantity %>">
+            <input type="text" placeholder="Origin" name="equipment[origin]" value="<%= equipment.origin %>">
+            <input type="date" placeholder="Date of Arrival" name="equipment[date_of_arrival]"
+                value="<%= equipment.date_of_arrival %>">
+            <input type="number" placeholder="Price" name="equipment[price]" value="<%= equipment.price %>">
+            <select name="equipment[room]" required>
+                <% for (let room of rooms) { %>
+                    <option value="<%= room._id %>" <%=equipment.room &&
+                        equipment.room._id.toString()===room._id.toString() ? 'selected' : '' %>><%= room.name %>
+                    </option>
+                    <% } %>
+            </select>
+            <button>Update Equipment</button>
+        </form>
+        <a href="/equipments">Back to Equipments</a>
+</body>
+
+</html>

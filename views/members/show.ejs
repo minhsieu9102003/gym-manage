@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %>
+        <h1>
+            <%= member.firstname %>
+                <%= member.lastname %>
+        </h1>
+        <h2>Join Date: <%= member.join_date %>
+        </h2>
+        <h3>Address 1: <%= member.address1 %>
+        </h3>
+        <h3>Address 2: <%= member.address2 %>
+        </h3>
+        <h3>Membership: <%= member.membership ? member.membership.tier : 'None' %>
+        </h3>
+        <h3>Room: <%= member.room ? member.room.name : 'None' %>
+        </h3>
+
+        <form action="/members/<%= member._id %>?_method=PUT" method="POST">
+            <input type="text" placeholder="First Name" name="member[firstname]" value="<%= member.firstname %>">
+            <input type="text" placeholder="Last Name" name="member[lastname]" value="<%= member.lastname %>">
+            <input type="date" placeholder="Join Date" name="member[join_date]" value="<%= member.join_date %>">
+            <input type="text" placeholder="Address 1" name="member[address1]" value="<%= member.address1 %>">
+            <input type="text" placeholder="Address 2" name="member[address2]" value="<%= member.address2 %>">
+
+            </select>
+            <select name="member[room]" required>
+                <% for (let room of rooms) { %>
+                    <option value="<%= room._id %>" <%=member.room && member.room._id.toString()===room._id.toString()
+                        ? 'selected' : '' %>><%= room.name %>
+                    </option>
+                    <% } %>
+            </select>
+            <button>Update Member</button>
+        </form>
+        <a href="/members">Back to Members</a>
+</body>
+
+</html>
