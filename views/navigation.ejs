@@ -1,0 +1,11 @@
+<div class="navigation">
+    <h3>Tú SêLa</h3>
+    <div class="navigation__button-container">
+        <% if (!currentUser) { %>
+            <a href="/login">Đăng nhập</a>
+            <a href="/register">Đăng kí</a>
+            <% } else { %>
+                <a href="/logout">Đăng xuất</a>
+                <% } %>
+    </div>
+</div>

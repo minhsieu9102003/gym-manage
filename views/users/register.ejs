@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="register">
+    <form action="/register" method="POST" class="register__form">
+        <h1>Đăng kí</h1>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <label for="role">Role</label>
+        <select name="role" id="role">
+            <option value="member">Member</option>
+            <option value="employee">Employee</option>
+        </select>
+        <button type="submit">Register</button>
+        <a href="/login">Đăng nhập</a>
+    </form>
+</body>
+
+</html>

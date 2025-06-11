@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memberships</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %>
+        <form action="/memberships" method="POST">
+            <select name="membership[member]" required>
+                <% for (let member of members) { %>
+                    <option value="<%= member._id %>">
+                        <%= member.firstname %>
+                            <%= member.lastname %>
+                    </option>
+                    <% } %>
+            </select>
+            <select name="membership[tier]" required>
+                <option value="Bronze 🥉">Bronze 🥉</option>
+                <option value="Silver 🥈">Silver 🥈</option>
+                <option value="Gold 🥇">Gold 🥇</option>
+            </select>
+            <input type="date" placeholder="Registration Date" name="membership[registration_date]" required>
+            <input type="date" placeholder="Renewal Date" name="membership[renewal_date]" required>
+            <input type="number" placeholder="Number of Sessions" name="membership[number_of_sessions]" required>
+            <input type="number" placeholder="Remaining Sessions" name="membership[remaining_sessions]" required>
+            <button>Add Membership</button>
+        </form>
+        <table class="membership-table">
+            <thead>
+                <tr>
+                    <th>Member</th>
+                    <th>Tier</th>
+                    <th>Registration Date</th>
+                    <th>Renewal Date</th>
+                    <th>Number of Sessions</th>
+                    <th>Remaining Sessions</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let membership of memberships) { %>
+                    <tr>
+                        <td><span>
+                                <%= membership.member ? `${membership.member.firstname} ${membership.member.lastname}`
+                                    : 'No Member Assigned' %>
+                            </span></td>
+                        <td><span>
+                                <%= membership.tier %>
+                            </span></td>
+                        <td><span>
+                                <%= membership.registration_date %>
+                            </span></td>
+                        <td><span>
+                                <%= membership.renewal_date %>
+                            </span></td>
+                        <td><span>
+                                <%= membership.number_of_sessions %>
+                            </span></td>
+                        <td><span>
+                                <%= membership.remaining_sessions %>
+                            </span></td>
+                        <td>
+                            <a href="/memberships/<%= membership._id %>">Update</a>
+                        </td>
+                        <td>
+                            <form action="/memberships/<%= membership._id %>?_method=DELETE" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <a href="/admin">Back to admin page</a>
+</body>
+
+</html>
