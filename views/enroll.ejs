@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="verifyEmployee">
+
+
+    <form action="/enroll" method="POST">
+        <h1>Enter Your Member ID</h1>
+        <input type="text" name="memberId" placeholder="Member ID" required>
+        <button type="submit">Submit</button>
+    </form>
+    <% if (error) { %>
+        <p style="color: red;">
+            <%= error %>
+        </p>
+        <% } %>
+</body>
+
+</html>

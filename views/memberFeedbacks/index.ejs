@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Feedbacks</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %>
+        <form action="/memberFeedbacks" method="POST">
+            <select name="feedback[member]">
+                <% for (let member of members) { %>
+                    <option value="<%= member._id %>">
+                        <%= member.firstname %>
+                            <%= member.lastname %>
+                    </option>
+                    <% } %>
+            </select>
+            <textarea placeholder="Feedback Content" name="feedback[content]"></textarea>
+            <input type="date" placeholder="Create Date" name="feedback[create_date]">
+            <button>Add Feedback</button>
+        </form>
+        <ul>
+            <% for (let feedback of feedbacks) { %>
+                <li>
+                    <% if (feedback.member) { %>
+                        <h1>Member: <%= feedback.member.firstname %>
+                                <%= feedback.member.lastname %>
+                        </h1>
+                        <% } else { %>
+                            <h1>Member: None</h1>
+                            <% } %>
+                                <h2>Content: <%= feedback.content %>
+                                </h2>
+                                <a href="/memberFeedbacks/<%= feedback._id %>">View</a>
+                                <form action="/memberFeedbacks/<%= feedback._id %>?_method=DELETE" method="POST">
+                                    <button>Delete</button>
+                                </form>
+                </li>
+                <% } %>
+        </ul>
+</body>
+
+</html>
