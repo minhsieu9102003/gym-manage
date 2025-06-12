@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="room__index">
+    <%- include('../navigation') %>
+        <form action="/rooms" method="POST" class="room__index-add-form">
+            <input type="text" placeholder="Room Name" name="room[name]">
+            <input type="number" placeholder="Room Capacity" name="room[capacity]">
+
+            <button class="room__index-add-button">Add Room</button>
+        </form>
+        <table class="room-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Capacity</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let room of rooms) { %>
+                    <tr>
+                        <td>
+                            <span>
+                                <%= room.name %>
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                <%= room.capacity%>
+                            </span>
+                        </td>
+
+
+
+                        <td>
+                            <a href="/rooms/<%= room._id %>">Update</a>
+                        </td>
+
+
+                        <td>
+                            <form action="/rooms/<%= room._id %>?_method=DELETE" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <a class='room__index-back' href="/admin">Back to admin page &#8592;</a>
+</body>
+
+</html>

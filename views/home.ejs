@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('./navigation') %>
+        <div class="home__main">
+            <div class="home__main--left">
+                <h1>Gym Tú SêLa - Gym của Tú SêLa </h1>
+                <p>Phòng gym hiện đại giúp anh chị em thư giãn sau những giờ làm việc căng thẳng,
+                    cùng nhiều ưu đãi đáng mong chờ
+                </p>
+                <a href="/enroll">Tham gia</a>
+            </div>
+            <div class="home__main--right">
+                <video muted loop autoplay id="video1" class="video1">
+                    <source src="/video.mp4" type="video/mp4">
+                    </source>
+                </video>
+            </div>
+        </div>
+        <div class="home__second">
+            <div class="home__second--pannel home__second--pannel-1">
+                <img src="/img/very.png" alt="">
+                <h2>Gói Gold</h2>
+                <span>Phòng vip ✔️</span>
+                <span>Có coach ✔️</span>
+                <span>Đồ uống miễn phí ✔️</span>
+                <span>Được cung cấp khăn ✔️</span>
+                <span>Tư vấn dinh dưỡng✔️</span>
+                <span>Tặng sticker hội viên ✔️</span>
+                <span class='home__second--pannel--price'>Giá: 1.000.000đ/tháng</span>
+                <a class='home__second--pannel--link' href="/enroll">Tham gia</a>
+            </div>
+            <div class="home__second--pannel home__second--pannel-1">
+                <img src="/img/decent.png" alt="">
+                <h2>Gói Silver</h2>
+                <span>Phòng vip ✔️</span>
+                <span>Đồ uống miễn phí ✔️</span>
+                <span>Tư vấn dinh dưỡng✔️</span>
+                <span>Tặng sticker hội viên ✔️</span>
+                <span class='home__second--pannel--price'>Giá: 700.000đ/tháng</span>
+                <a class='home__second--pannel--link' href="/enroll">Tham gia</a>
+            </div>
+            <div class="home__second--pannel home__second--pannel-1">
+                <img src="/img/little.png" alt="">
+                <h2>Gói Bronze</h2>
+                <span>Được cung cấp khăn ✔️</span>
+                <span>Tặng sticker hội viên ✔️</span>
+                <span class='home__second--pannel--price'>Giá: 400.000đ/tháng</span>
+                <a class='home__second--pannel--link' href="/enroll">Tham gia</a>
+            </div>
+
+        </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
+    tl.to('.video1', {
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+        ease: 'power4.inOut',
+        duration: 3
+    })
+</script>
+
+</html>

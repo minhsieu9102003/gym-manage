@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 200;
+}
+
+.navigation {
+    padding: 1rem 3rem;
+    background-color: rgb(226, 226, 226);
+    color: rgb(0, 0, 0);
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    letter-spacing: -.1rem;
+}
+
+.navigation__button-container a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.navigation__button-container {
+    display: flex;
+    gap: 1rem
+}
+
+.room-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+.room-table thead tr {
+    background-color: #f2f2f2;
+}
+
+.room-table th,
+.room-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+.room-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.room-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.room-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.room-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.room-table a {
+    color: #009879;
+    text-decoration: none;
+}
+
+.room-table button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.room-table button:hover {
+    background-color: #2980b9;
+}
+
+.room-table form {
+    display: inline;
+}
+
+.equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+.equipment-table thead tr {
+    background-color: #f2f2f2;
+}
+
+.equipment-table th,
+.equipment-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+.equipment-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.equipment-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.equipment-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.equipment-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.equipment-table a {
+    color: #009879;
+    text-decoration: none;
+}
+
+.equipment-table button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.equipment-table button:hover {
+    background-color: #2980b9;
+}
+
+.equipment-table form {
+    display: inline;
+}
+
+.member-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+.member-table thead tr {
+    background-color: #f2f2f2;
+}
+
+.member-table th,
+.member-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+.member-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.member-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.member-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.member-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.member-table a {
+    color: #009879;
+    text-decoration: none;
+}
+
+.member-table button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.member-table button:hover {
+    background-color: #2980b9;
+}
+
+.member-table form {
+    display: inline;
+}
+
+.membership-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+.membership-table thead tr {
+    background-color: #f2f2f2;
+}
+
+.membership-table th,
+.membership-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+.membership-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.membership-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.membership-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.membership-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.membership-table a {
+    color: #009879;
+    text-decoration: none;
+}
+
+.membership-table button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.membership-table button:hover {
+    background-color: #2980b9;
+}
+
+.membership-table form {
+    display: inline;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+.employee-table thead tr {
+    background-color: #f2f2f2;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+.employee-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.employee-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.employee-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.employee-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.employee-table a {
+    color: #009879;
+    text-decoration: none;
+}
+
+.employee-table button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.employee-table button:hover {
+    background-color: #2980b9;
+}
+
+.employee-table form {
+    display: inline;
+}
+
+.home__main {
+    padding: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50%, 1fr;
+    gap: 2rem;
+}
+
+video {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.home__main--right {
+    grid-column: 2/3;
+    overflow: hidden;
+}
+
+.home__main--right video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.5);
+}
+
+.home__main--left h1 {
+    font-weight: 800;
+    margin: 3rem 0rem;
+    font-size: 3rem;
+}
+
+.home__main--left p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.home__main--left button {
+    background-color: black;
+    font-size: .9rem;
+    padding: .5rem 1rem;
+    color: white;
+    cursor: pointer;
+    border: none
+}
+
+.home__second {
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.home__second--pannel {
+    width: 30%;
+    flex: 1;
+    height: 45rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.home__second--pannel img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.home__second--pannel--link {
+
+    display: flex;
+    justify-self: end;
+}
+
+.home__second--pannel--price {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+
+.home__main a,
+.home__second a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: .5rem 1rem;
+    cursor: pointer;
+
+}
+
+.admin__side-nav {
+    background: black;
+    width: 17rem;
+
+    height: 100vh;
+    transform: translateX(-100%)
+}
+
+.admin__side-nav * {
+    color: white;
+    text-decoration: none;
+}
+
+.admin__link-list {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.admin__link-list a {
+    width: 100%;
+    height: 2rem;
+    padding: 2rem .5rem;
+    display: flex;
+    align-items: center;
+    transition: padding .2s ease-in-out, background-color .1s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.admin__link-list a:hover {
+    background-color: white;
+    color: black;
+    padding-left: 2rem;
+}
+
+.room__index-back,
+.room__show-back,
+.employee__index-back,
+.employee__show-back,
+.equipment__index-back,
+.equipment__show-back,
+.member__index-back,
+.member__show-back,
+.membership__index-back,
+.membership__show-back {
+    color: black;
+}
+
+.room__index button,
+.room__show button,
+.employee__index button,
+.employee__show button,
+.equipment__index button,
+.equipment__show button,
+.member__index button,
+.member__show button,
+.membership__index button,
+.membership__show button {
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    color: white;
+    transition: all .1s ease-in-out;
+}
+
+.room__index button:hover,
+.room__show button:hover,
+.employee__index button:hover,
+.employee__show button:hover,
+.equipment__index button:hover,
+.equipment__show button:hover,
+.member__index button:hover,
+.member__show button:hover,
+.membership__index button:hover,
+.membership__show button:hover {
+    background-color: white;
+    color: black;
+}
+
+.room__index-add-form,
+.employee__index-add-form,
+.equipment__index-add-form,
+.member__index-add-form,
+.membership__index-add-form {
+    margin-top: 1rem;
+}
+
+.room__index-add-button,
+.room__show-add-button,
+.employee__index-add-button,
+.employee__show-add-button,
+.equipment__index-add-button,
+.equipment__show-add-button,
+.member__index-add-button,
+.member__show-add-button,
+.membership__index-add-button,
+.membership__show-add-button {
+    padding: .5rem;
+}
+
+.room__index-add-form input,
+.room__show-add-form input,
+.employee__index-add-form input,
+.employee__show-add-form input,
+.equipment__index-add-form input,
+.equipment__show-add-form input,
+.member__index-add-form input,
+.member__show-add-form input,
+.membership__index-add-form input,
+.membership__show-add-form input {
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.room__index-add-form input:focus,
+.room__show-add-form input:focus,
+.employee__index-add-form input:focus,
+.employee__show-add-form input:focus,
+.equipment__index-add-form input:focus,
+.equipment__show-add-form input:focus,
+.member__index-add-form input:focus,
+.member__show-add-form input:focus,
+.membership__index-add-form input:focus,
+.membership__show-add-form input:focus {
+    outline: none;
+}
+
+.room__show-container,
+.employee__show-container,
+.equipment__show-container,
+.member__show-container,
+.membership__show-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.register,
+.login,
+.verifyEmployee {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.register form,
+.login form,
+.verifyEmployee form {
+    background-color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 1rem;
+    width: 40%;
+}
+
+.register a,
+.login a,
+.verifyEmployee a {
+    color: black
+}
+
+.register button,
+.login button,
+.verifyEmployee button {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 50%;
+    padding: 1rem 0rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.register input,
+.login input,
+.verifyEmployee input {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.register input:focus,
+.login input:focus,
+.verifyEmployee input:focus {
+    outline: none
+}
+
+
+.employee__room,
+.employee__profile,
+.user__profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(231, 231, 231);
+}
+
+.employee__profile-container,
+.user__profile-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.user__profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+
+.employee__profile ul {
+    list-style: none;
+}
+
+.employee__profile a {
+    color: black
+}
+
+.employee__profile h1 {
+    margin: 1rem 0;
+    font-weight: 800;
+}
+
+
+.employee__room ul {
+    list-style-type: none;
+
+}
+
+.employee__room h1 {
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+.employee__room .employee__room-room-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    gap: 1rem;
+    width: 40rem;
+    justify-content: space-between;
+}
+
+.employee__room .employee__room-room-card h2 {
+    font-weight: 800;
+}
+
+.employee__room-equipment-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.employee__member-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.user__profile-name {
+    font-weight: 800;
+}

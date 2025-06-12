@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %>
+
+        <h1>Profile of <%= employee.firstname %>
+                <%= employee.lastname %>
+        </h1>
+        <h2>Job: <%= employee.job %>
+        </h2>
+
+        <h3>Rooms:</h3>
+        <ul>
+            <% employee.rooms.forEach(room=> { %>
+                <li><a href="/employees/<%= employee._id %>/rooms">
+                        <%= room.name %>
+                    </a></li>
+                <% }) %>
+        </ul>
+
+        <h3>Update Employee Details:</h3>
+        <form action="/employees/<%= employee._id %>?_method=PUT" method="POST">
+            <label for="firstname">First Name</label>
+            <input type="text" name="employee[firstname]" id="firstname" value="<%= employee.firstname %>" required>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" name="employee[lastname]" id="lastname" value="<%= employee.lastname %>" required>
+
+            <label for="job">Job</label>
+            <select name="employee[job]" id="job" required>
+                <option value="coach" <%=employee.job==='coach' ? 'selected' : '' %>>Coach</option>
+                <option value="lễ tân" <%=employee.job==='lễ tân' ? 'selected' : '' %>>Lễ tân</option>
+                <option value="vệ sinh" <%=employee.job==='vệ sinh' ? 'selected' : '' %>>Vệ sinh</option>
+            </select>
+
+            <button type="submit">Update Employee</button>
+        </form>
+
+        <form action="/employees/<%= employee._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete Employee</button>
+        </form>
+
+        <a href="/employees">Back to Employees</a>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+[{
+  "_id": {
+    "$oid": "6656e4e50669fbe803cf0f82"
+  },
+  "firstname": "Thị Trang Trangg",
+  "lastname": " Nguyễn",
+  "join_date": "2024-05-09",
+  "address1": "Phú Điền, Từ Sơn, Bắc Ninh",
+  "address2": "Luc Nam, Bac Giang",
+  "room": {
+    "$oid": "6656e1cc81024915aa766946"
+  },
+  "__v": 0,
+  "membership": {
+    "$oid": "6656e545ec5ebef6ed73741e"
+  }
+},
+{
+  "_id": {
+    "$oid": "66572c880860e9644699472c"
+  },
+  "firstname": "dz",
+  "lastname": "Viet Hai",
+  "join_date": "2024-05-01",
+  "address1": "Phú Điền, Từ Sơn, Bắc Ninh",
+  "address2": "Luc Nam, Bac Giang",
+  "room": {
+    "$oid": "6656e1b581024915aa766932"
+  },
+  "__v": 0,
+  "membership": {
+    "$oid": "66574ed780f361cae59ce5c6"
+  }
+},
+{
+  "_id": {
+    "$oid": "66574ec080f361cae59ce5b6"
+  },
+  "firstname": "Hải",
+  "lastname": "Nguyễn Văn",
+  "join_date": "2024-05-09",
+  "address1": "Phú Điền, Từ Sơn, Bắc Ninh",
+  "address2": "Luc Nam, Bac Giang",
+  "room": {
+    "$oid": "66574e8780f361cae59ce58e"
+  },
+  "__v": 0,
+  "membership": {
+    "$oid": "66574ed780f361cae59ce5c6"
+  }
+},
+{
+  "_id": {
+    "$oid": "665fccfd25ce9f0b2b0c87c2"
+  },
+  "firstname": "Trần",
+  "lastname": "Tuấn",
+  "join_date": "2024-06-04",
+  "address1": "Phú Điền, Từ Sơn, Bắc Ninh",
+  "address2": "Luc Nam, Bac Giang",
+  "room": {
+    "$oid": "66574e8780f361cae59ce58e"
+  },
+  "__v": 0,
+  "membership": {
+    "$oid": "665fcd1025ce9f0b2b0c87d2"
+  }
+},
+{
+  "_id": {
+    "$oid": "666073b7366240b483f93c3a"
+  },
+  "firstname": "Huy",
+  "lastname": "QUân",
+  "join_date": "2003-06-05",
+  "address1": "Bắc Từ Liêm, Vĩnh Phúc, Hà Nội",
+  "address2": "ngõ 9 phố Cà Ngừ, đường Vịt Quay",
+  "room": {
+    "$oid": "6656e1c681024915aa766941"
+  },
+  "__v": 0,
+  "membership": {
+    "$oid": "66607418366240b483f93c60"
+  }
+},
+{
+  "_id": {
+    "$oid": "666123c02e8dd1e18c0fe8bd"
+  },
+  "firstname": "TÚ",
+  "lastname": "Hải",
+  "join_date": "2024-06-12",
+  "address1": "Phú Điền, Từ Sơn, Bắc Ninh",
+  "address2": "Luc Nam, Bac Giang",
+  "room": {
+    "$oid": "66574e8780f361cae59ce58e"
+  },
+  "__v": 0,
+  "membership": {
+    "$oid": "666123f12e8dd1e18c0fe8d2"
+  }
+},
+{
+  "_id": {
+    "$oid": "666a6551ebfcdbbc4ff22901"
+  },
+  "firstname": "Sơn",
+  "lastname": "Nguyễn Lê",
+  "join_date": "2024-06-13",
+  "address1": "Thanh Hóa, Hà Nội",
+  "address2": "Việt nam, ĐNA",
+  "room": {
+    "$oid": "66574e8780f361cae59ce58e"
+  },
+  "__v": 0,
+  "membership": {
+    "$oid": "666a659debfcdbbc4ff22916"
+  }
+}]

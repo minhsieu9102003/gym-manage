@@ -1,0 +1,111 @@
+[{
+  "_id": {
+    "$oid": "6656e1b581024915aa766932"
+  },
+  "name": "Phòng thường 1 ",
+  "capacity": 30,
+  "equipment": [],
+  "members": [
+    {
+      "$oid": "66572c880860e9644699472c"
+    }
+  ],
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6656e1bb81024915aa766937"
+  },
+  "name": "Phòng thường 2",
+  "capacity": 30,
+  "equipment": [
+    {
+      "$oid": "6656e20f81024915aa766963"
+    }
+  ],
+  "members": [],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6656e1bf81024915aa76693c"
+  },
+  "name": "Phòng thường 3",
+  "capacity": 35,
+  "equipment": [
+    {
+      "$oid": "6656e21b81024915aa76696c"
+    }
+  ],
+  "members": [],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6656e1c681024915aa766941"
+  },
+  "name": "Phòng thường 4",
+  "capacity": 28,
+  "equipment": [
+    {
+      "$oid": "6656e22d81024915aa766975"
+    },
+    {
+      "$oid": "66607456366240b483f93c83"
+    },
+    {
+      "$oid": "66607477366240b483f93c92"
+    }
+  ],
+  "members": [
+    {
+      "$oid": "666073b7366240b483f93c3a"
+    }
+  ],
+  "__v": 5
+},
+{
+  "_id": {
+    "$oid": "6656e1cc81024915aa766946"
+  },
+  "name": "Phòng vjp 1 ",
+  "capacity": 10,
+  "equipment": [
+    {
+      "$oid": "6656e24481024915aa76697e"
+    }
+  ],
+  "members": [
+    {
+      "$oid": "6656e4e50669fbe803cf0f82"
+    }
+  ],
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "66574e8780f361cae59ce58e"
+  },
+  "name": "Phòng vjp 3",
+  "capacity": 35,
+  "equipment": [
+    {
+      "$oid": "666a65e4ebfcdbbc4ff22928"
+    }
+  ],
+  "members": [
+    {
+      "$oid": "66574ec080f361cae59ce5b6"
+    },
+    {
+      "$oid": "665fccfd25ce9f0b2b0c87c2"
+    },
+    {
+      "$oid": "666123c02e8dd1e18c0fe8bd"
+    },
+    {
+      "$oid": "666a6551ebfcdbbc4ff22901"
+    }
+  ],
+  "__v": 5
+}]

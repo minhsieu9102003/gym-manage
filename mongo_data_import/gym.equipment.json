@@ -1,0 +1,135 @@
+[{
+  "_id": {
+    "$oid": "6656e1ff81024915aa76695a"
+  },
+  "name": "Treadmillé",
+  "quantity": 4,
+  "origin": "Athlean-X",
+  "date_of_arrival": "2024-05-15",
+  "image": "",
+  "price": 10000000,
+  "room": {
+    "$oid": "6656e1d681024915aa76694b"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6656e20f81024915aa766963"
+  },
+  "name": "Treadmill",
+  "quantity": 4,
+  "origin": "Athlean-X",
+  "date_of_arrival": "2024-05-01",
+  "image": "",
+  "price": 10000000,
+  "room": {
+    "$oid": "6656e1bb81024915aa766937"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6656e21b81024915aa76696c"
+  },
+  "name": "Treadmill",
+  "quantity": 4,
+  "origin": "Athlean-X",
+  "date_of_arrival": "2024-05-01",
+  "image": "",
+  "price": 10000000,
+  "room": {
+    "$oid": "6656e1bf81024915aa76693c"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6656e22d81024915aa766975"
+  },
+  "name": "Treadmill",
+  "quantity": 3,
+  "origin": "Athlean-X",
+  "date_of_arrival": "2024-05-08",
+  "image": "",
+  "price": 10000000,
+  "room": {
+    "$oid": "6656e1c681024915aa766941"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6656e24481024915aa76697e"
+  },
+  "name": "Treadmill",
+  "quantity": 3,
+  "origin": "ProBuild",
+  "date_of_arrival": "2024-06-03",
+  "image": "",
+  "price": 15000000,
+  "room": {
+    "$oid": "6656e1cc81024915aa766946"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6656e25381024915aa766987"
+  },
+  "name": "Treadmill",
+  "quantity": 4,
+  "origin": "ProBuild",
+  "date_of_arrival": "2024-05-06",
+  "image": "",
+  "price": 16000000,
+  "room": {
+    "$oid": "6656e1d681024915aa76694b"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6656e27d81024915aa766990"
+  },
+  "name": "KettleBell 10kg",
+  "quantity": 10,
+  "origin": "KettleShop",
+  "date_of_arrival": "2024-05-03",
+  "image": "",
+  "price": 500000,
+  "room": {
+    "$oid": "6656e1d681024915aa76694b"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66607477366240b483f93c92"
+  },
+  "name": "Lateral Raise",
+  "quantity": 12,
+  "origin": "vinh phuc",
+  "date_of_arrival": "2024-05-29",
+  "image": "",
+  "price": 120000,
+  "room": {
+    "$oid": "6656e1c681024915aa766941"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "666a65e4ebfcdbbc4ff22928"
+  },
+  "name": "MZTZC",
+  "quantity": 1,
+  "origin": "BK",
+  "date_of_arrival": "2024-06-13",
+  "image": "https://plus.unsplash.com/premium_photo-1671028546486-8ac087885df5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHVtYmVsbHxlbnwwfHwwfHx8MA%3D%3D",
+  "price": 2000000000,
+  "room": {
+    "$oid": "66574e8780f361cae59ce58e"
+  },
+  "__v": 0
+}]

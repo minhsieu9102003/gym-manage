@@ -1,0 +1,98 @@
+[{
+  "_id": {
+    "$oid": "6656e545ec5ebef6ed73741e"
+  },
+  "member": {
+    "$oid": "6656e4e50669fbe803cf0f82"
+  },
+  "tier": "Gold 🥇",
+  "registration_date": "2024-05-01",
+  "renewal_date": "2024-05-07",
+  "number_of_sessions": 12,
+  "remaining_sessions": 12,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66572ca10860e9644699473c"
+  },
+  "member": {
+    "$oid": "66572c880860e9644699472c"
+  },
+  "tier": "Bronze",
+  "registration_date": "2024-05-01",
+  "renewal_date": "2024-05-15",
+  "number_of_sessions": 30,
+  "remaining_sessions": 30,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66574ed780f361cae59ce5c6"
+  },
+  "member": {
+    "$oid": "66574ec080f361cae59ce5b6"
+  },
+  "tier": "Silver 🥈",
+  "registration_date": "2024-05-02",
+  "renewal_date": "2024-05-09",
+  "number_of_sessions": 30,
+  "remaining_sessions": 30,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665fcd1025ce9f0b2b0c87d2"
+  },
+  "member": {
+    "$oid": "665fccfd25ce9f0b2b0c87c2"
+  },
+  "tier": "Gold 🥇",
+  "registration_date": "2024-05-29",
+  "renewal_date": "2024-06-02",
+  "number_of_sessions": 6,
+  "remaining_sessions": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66607418366240b483f93c60"
+  },
+  "member": {
+    "$oid": "666073b7366240b483f93c3a"
+  },
+  "tier": "Gold 🥇",
+  "registration_date": "2024-06-07",
+  "renewal_date": "2024-06-02",
+  "number_of_sessions": 12,
+  "remaining_sessions": 12,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "666123f12e8dd1e18c0fe8d2"
+  },
+  "member": {
+    "$oid": "666123c02e8dd1e18c0fe8bd"
+  },
+  "tier": "Gold 🥇",
+  "registration_date": "2024-06-29",
+  "renewal_date": "2024-06-18",
+  "number_of_sessions": 60,
+  "remaining_sessions": 55,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "666a659debfcdbbc4ff22916"
+  },
+  "member": {
+    "$oid": "666a6551ebfcdbbc4ff22901"
+  },
+  "tier": "Gold 🥇",
+  "registration_date": "2024-06-13",
+  "renewal_date": "2026-06-13",
+  "number_of_sessions": 720,
+  "remaining_sessions": 720,
+  "__v": 0
+}]

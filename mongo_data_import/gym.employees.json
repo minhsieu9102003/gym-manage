@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "6656e2a581024915aa7669b9"
+  },
+  "firstname": "Hải Nam",
+  "lastname": "Nguyễn Văn",
+  "job": "coach",
+  "rooms": [
+    {
+      "$oid": "6656e1cc81024915aa766946"
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6656e2ad81024915aa7669c0"
+  },
+  "firstname": "Văn Tuấn",
+  "lastname": "Trần",
+  "job": "coach",
+  "rooms": [
+    {
+      "$oid": "6656e1d681024915aa76694b"
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66607339366240b483f93c21"
+  },
+  "firstname": "",
+  "lastname": "",
+  "job": "",
+  "rooms": [],
+  "__v": 0
+}]

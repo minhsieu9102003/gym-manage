@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %> 
+        <% if (feedback.member) { %>
+            <h1>Member: <%= feedback.member.firstname %>
+                    <%= feedback.member.lastname %>
+            </h1>
+            <% } else { %>
+                <h1>Member: None</h1>
+                <% } %>
+                    <h2>Content: <%= feedback.content %>
+                    </h2>
+                    <h3>Create Date: <%= feedback.create_date.toISOString().substring(0, 10) %>
+                    </h3>
+                    <form action="/memberFeedbacks/<%= feedback._id %>?_method=PUT" method="POST">
+                        <select name="feedback[member]">
+                            <% for (let member of members) { %>
+                                <option value="<%= member._id %>" <%=feedback.member &&
+                                    feedback.member._id.toString()===member._id.toString() ? 'selected' : '' %>><%=
+                                        member.firstname %>
+                                        <%= member.lastname %>
+                                </option>
+                                <% } %>
+                        </select>
+                        <textarea placeholder="Feedback Content"
+                            name="feedback[content]"><%= feedback.content %></textarea>
+                        <input type="date" placeholder="Create Date" name="feedback[create_date]"
+                            value="<%= feedback.create_date.toISOString().substring(0, 10) %>">
+                        <button>Update Feedback</button>
+                    </form>
+                    <a href="/memberFeedbacks">Back to Feedbacks</a>
+</body>
+
+</html>

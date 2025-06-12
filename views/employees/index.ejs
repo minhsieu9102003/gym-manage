@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="employee__index">
+    <%- include('../navigation') %>
+        <form class='employee__index-add-form' action="/employees" method="POST">
+            <input type="text" placeholder="First Name" name="employee[firstname]" required>
+            <input type="text" placeholder="Last Name" name="employee[lastname]" required>
+            <select name="employee[job]" required>
+                <option value="coach">coach</option>
+                <option value="lễ tân">lễ tân</option>
+                <option value="vệ sinh">vệ sinh</option>
+            </select>
+            <select name="employee[rooms]" multiple required>
+                <% for (let room of rooms) { %>
+                    <option value="<%= room._id %>">
+                        <%= room.name %>
+                    </option>
+                    <% } %>
+            </select>
+            <button class="employee__index-add-button">Add Employee</button>
+        </form>
+        <table class="employee-table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Job</th>
+                    <th>Rooms</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let employee of employees) { %>
+                    <tr>
+                        <td><span>
+                                <%= employee.firstname %>
+                            </span></td>
+                        <td><span>
+                                <%= employee.lastname %>
+                            </span></td>
+                        <td><span>
+                                <%= employee.job %>
+                            </span></td>
+                        <td>
+                            <% if (employee.rooms && employee.rooms.length> 0) { %>
+                                <span>
+                                    <% employee.rooms.forEach(function(room, index) { %>
+                                        <%= room.name %>
+                                            <%= index < employee.rooms.length - 1 ? ', ' : '' %>
+                                                <% }) %>
+                                </span>
+                                <% } else { %>
+                                    <span>No Rooms Assigned</span>
+                                    <% } %>
+                        </td>
+                        <td>
+                            <a href="/employees/<%= employee._id %>">Update</a>
+                        </td>
+                        <td>
+                            <form action="/employees/<%= employee._id %>?_method=DELETE" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <a class='employee__index-back' href="/admin">Back to admin page &#8592;</a>
+</body>
+
+</html>

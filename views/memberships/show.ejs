@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %>
+        <h1>Membership for <%= membership.member ? `${membership.member.firstname} ${membership.member.lastname}`
+                : 'No Member Assigned' %>
+        </h1>
+        <h2>Tier: <%= membership.tier %>
+        </h2>
+        <h3>Registration Date: <%= membership.registration_date %>
+        </h3>
+        <h3>Renewal Date: <%= membership.renewal_date %>
+        </h3>
+        <h3>Number of Sessions: <%= membership.number_of_sessions %>
+        </h3>
+        <h3>Remaining Sessions: <%= membership.remaining_sessions %>
+        </h3>
+
+        <form action="/memberships/<%= membership._id %>?_method=PUT" method="POST">
+            <select name="membership[member]" required>
+                <% for (let member of members) { %>
+                    <option value="<%= member._id %>" <%=membership.member &&
+                        membership.member._id.toString()===member._id.toString() ? 'selected' : '' %>><%=
+                            member.firstname %>
+                            <%= member.lastname %>
+                    </option>
+                    <% } %>
+            </select>
+            <select name="membership[tier]" required>
+                <option value="Bronze 🥉" <%=membership.tier==='Bronze 🥉' ? 'selected' : '' %>>Bronze 🥉</option>
+                <option value="Silver 🥈" <%=membership.tier==='Silver 🥈' ? 'selected' : '' %>>Silver 🥈</option>
+                <option value="Gold 🥇" <%=membership.tier==='Gold 🥇' ? 'selected' : '' %>>Gold 🥇</option>
+            </select>
+            <input type="date" placeholder="Registration Date" name="membership[registration_date]"
+                value="<%= membership.registration_date %>" required>
+            <input type="date" placeholder="Renewal Date" name="membership[renewal_date]"
+                value="<%= membership.renewal_date %>" required>
+            <input type="number" placeholder="Number of Sessions" name="membership[number_of_sessions]"
+                value="<%= membership.number_of_sessions %>" required>
+            <input type="number" placeholder="Remaining Sessions" name="membership[remaining_sessions]"
+                value="<%= membership.remaining_sessions %>" required>
+            <button>Update Membership</button>
+        </form>
+        <a href="/memberships">Back to Memberships</a>
+</body>
+
+</html>

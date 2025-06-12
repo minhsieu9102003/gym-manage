@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../navigation') %>
+        <div class='employee__profile'>
+            <div class="employee__profile-container">
+                <h1>Profile of <%= employee.firstname %>
+                        <%= employee.lastname %>
+                </h1>
+                <h2>Job: <%= employee.job %>
+                </h2>
+                <h3>Rooms:</h3>
+                <ul>
+                    <% employee.rooms.forEach(room=> { %>
+                        <li><a href="/employees/<%= employee._id %>/rooms">
+                                <%= room.name %>
+                            </a></li>
+                        <% }) %>
+                </ul>
+            </div>
+        </div>
+</body>
+
+</html>
